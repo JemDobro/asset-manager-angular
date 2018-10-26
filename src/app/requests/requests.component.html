@@ -1,0 +1,13 @@
+<section class="requests">
+  <h3>Requests</h3>
+  <ul>
+    <li class="request" *ngFor="let request of _requests">
+      <div><span>{{ request.type }} - {{ request. model }} - {{ request.version }}</span></div>
+      <div><span>Quantity: </span>{{ request.quantity }}</div>
+      <div><span>Start Date: </span>{{ request.start }}</div>
+      <div><span>End Date: </span>{{ request.end }}</div>
+      <div><span>Status: </span>pending</div>
+    </li>
+  </ul>
+</section>
+

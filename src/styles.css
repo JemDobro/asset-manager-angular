@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(80,89,123);
+}
+
+body {
+  margin: 50;
+  padding-left: 30;
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(80,89,123);
+}
+
+h1 {
+  color: rgb(245, 162, 7);
+  background-color: rgb(80,89,123);
+}
+
+a{
+  color: rgba(255, 230, 0, 0.897);
+}
