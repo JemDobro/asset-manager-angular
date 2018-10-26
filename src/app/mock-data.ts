@@ -73,7 +73,7 @@ export const REQUESTS: Request[] = [
     end : "2018-11-5",
     userId : 1    
   }
-];
+]
 
 // export const USERS: User[] = [
 //   {
@@ -100,5 +100,3 @@ export const REQUESTS: Request[] = [
 //     email : "jane@user.com",
 //     password : "$2a$10$.3iXdEXdPhkC/5vbtS9tTukPtytOC.RQg.OhJwmQxV0aMMyABcrFK"
 //   }
-
-]
