@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
-import {Request } from "../models";
+import { Request } from "../models";
 import { REQUESTS } from '../mock-data';
 
 @Component({
@@ -33,7 +33,8 @@ export class RequestFormComponent implements OnInit {
       end: form.value.end,
       status: form.value.status,
       userId: form.value.userId
-    })
+    });
+    this._requests = update_requests;
   }
   ngOnInit() {
   }

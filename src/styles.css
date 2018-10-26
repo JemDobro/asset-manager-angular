@@ -8,8 +8,8 @@ html {
 }
 
 body {
-  margin: 50;
-  padding-left: 30;
+  margin: 50px;
+  padding-left: 10px;
   font-family: sans-serif;
   color: white;
   background-color: rgb(80,89,123);

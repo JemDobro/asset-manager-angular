@@ -1,0 +1,15 @@
+input, button {
+  width: 18.75rem;
+  height: 3.125rem;
+  line-height: 100%;
+  display: block;
+  padding: 0.8em;
+  margin: 0.8rem auto 0;
+  background:rgba(160, 169, 179, 0.973);
+  color: white;
+  font-size: 1.3em;
+  border: solid 1px #1f253d;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}

@@ -5,12 +5,11 @@ import { Request } from '../models';
 import { RequestsService } from '../_services/requests.service';
 
 @Component({
-  selector: 'app-requests',
-  templateUrl: './requests.component.html',
-  styleUrls: ['./requests.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class RequestsComponent implements OnInit {
-  // Accept user input as a variable
+export class DashboardComponent implements OnInit {
   _requests: any;
 
   constructor(private requestsService: RequestsService) { }
@@ -24,5 +23,8 @@ export class RequestsComponent implements OnInit {
       .subscribe(requests => this._requests = requests);
   }
 
-}
+  getFilteredRequest(status) {
+    return this._requests.filter(request => request.status === status)
+  }
 
+}

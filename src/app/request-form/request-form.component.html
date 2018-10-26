@@ -5,10 +5,10 @@
     <input [(ngModel)]="request.model" placeholder="model" name="model" #model="ngModel" required/>
     <input [(ngModel)]="request.version" placeholder="version" name="version" #version="ngModel" />
     <input [(ngModel)]="request.quantity" placeholder="quantity" name="quantity" #quantity="ngModel" required/>
-    <input [(ngModel)]="request.start" placeholder="start date" name="start" #start="ngModel" required/>
-    <input [(ngModel)]="request.end" placeholder="end date" name="end" #end="ngModel" required/>
+    <input type="date" [(ngModel)]="request.start" placeholder="start date" name="start" #start="ngModel" required/>
+    <input type="date" [(ngModel)]="request.end" placeholder="end date" name="end" #end="ngModel" required/>
     <button type="submit" [disabled]="!requestForm.form.valid">save</button>
   </form>
 </section>
 
-<app-requests [_requests]="_requests"></app-requests>
+<app-requests></app-requests>
