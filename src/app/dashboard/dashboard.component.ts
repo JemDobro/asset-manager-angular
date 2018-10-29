@@ -11,6 +11,7 @@ import { RequestsService } from '../_services/requests.service';
 })
 export class DashboardComponent implements OnInit {
   _requests: any;
+  requesting: boolean = false;
 
   constructor(private requestsService: RequestsService) { }
 
@@ -26,5 +27,9 @@ export class DashboardComponent implements OnInit {
   getFilteredRequest(status) {
     return this._requests.filter(request => request.status === status)
   }
+
+  toggleRequestForm() {
+    this.requesting = !this.requesting;
+  } 
 
 }

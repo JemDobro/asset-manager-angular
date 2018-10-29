@@ -1,3 +1,5 @@
+<button (click)="toggleRequestForm()">Create Request</button>
+<app-request-form *ngIf=requesting></app-request-form>
 <section class="requests-summary">
   <h3>Summary of your Requests Sally</h3>
   <h4>Checked Out: {{ getFilteredRequest('checked out').length }}</h4>
