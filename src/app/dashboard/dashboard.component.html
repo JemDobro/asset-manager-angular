@@ -1,6 +1,6 @@
 <button (click)="toggleDetails()">Details</button>
-<button *ngIf=!requesting (click)="toggleRequestForm()">Create Request</button>
-<button *ngIf=requesting (click)="toggleRequestForm()">Close Request Form</button>
+<button *ngIf=!requesting type ="button" (click)="toggleRequestForm()">Create Request</button>
+<button *ngIf=requesting type ="button" (click)="toggleRequestForm()">Close Request Form</button>
 <app-request-form *ngIf=requesting></app-request-form>
 <section class="requests-summary">
   <h3>Summary of your Requests Sally</h3>
@@ -22,6 +22,8 @@
     <li class="pending-summary" *ngFor="let request of getFilteredRequest('pending')">
       <div><span>{{ request.type }}</span></div>
       <div><span>Start Date: </span>{{ request.start }}</div>
+      <button type ="button" class="btn-cancel" (click)="cancelRequest(request)">Cancel</button>
+      <button type ="button" class="btn-edit" (click)="editRequest(request)">Edit</button>
       <div *ngIf=wantsDetails>
         <div><span>End Date: </span>{{ request.end }}</div>
         <div><span>Model: </span>{{ request.model }}</div>
@@ -35,6 +37,7 @@
     <li class="cancelled-summary" *ngFor="let request of getFilteredRequest('cancelled')">
       <div><span>{{ request.type }}</span></div>
       <div><span>Start Date: </span>{{ request.start }}</div>
+      <button type ="button" class="btn-resubmit" (click)="resubmitRequest(request)">Resubmit</button>
       <div *ngIf=wantsDetails>
           <div><span>End Date: </span>{{ request.end }}</div>
           <div><span>Model: </span>{{ request.model }}</div>

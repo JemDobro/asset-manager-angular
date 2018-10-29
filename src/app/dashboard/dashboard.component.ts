@@ -37,4 +37,16 @@ export class DashboardComponent implements OnInit {
     this.wantsDetails = !this.wantsDetails;
   } 
 
+  // cancelRequest(request) {
+  //   console.log("cancel " + request.type)
+  // }  this works as a test, next step is changing status in db
+
+  // editRequest(request) {
+  //   console.log("edit " + request.type)
+  //   this.requesting = !this.requesting;
+  // } this works as a test, next step is opening pre-populated form
+
+  // resubmitRequest(request) {
+  //   console.log("resubmit " + request.type)
+  // }  this works as a test, next step is changing status in db
 }
