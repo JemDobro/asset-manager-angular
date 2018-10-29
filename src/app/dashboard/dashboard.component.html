@@ -1,5 +1,6 @@
 <button (click)="toggleDetails()">Details</button>
-<button (click)="toggleRequestForm()">Create Request</button>
+<button *ngIf=!requesting (click)="toggleRequestForm()">Create Request</button>
+<button *ngIf=requesting (click)="toggleRequestForm()">Close Request Form</button>
 <app-request-form *ngIf=requesting></app-request-form>
 <section class="requests-summary">
   <h3>Summary of your Requests Sally</h3>
