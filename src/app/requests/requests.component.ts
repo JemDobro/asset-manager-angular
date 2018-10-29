@@ -24,5 +24,9 @@ export class RequestsComponent implements OnInit {
       .subscribe(requests => this._requests = requests);
   }
 
+  getFilteredRequest(status) {
+    return this._requests.filter(request => request.status === status)
+  }
+
 }
 

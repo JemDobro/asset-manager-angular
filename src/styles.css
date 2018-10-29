@@ -23,3 +23,7 @@ h1 {
 a{
   color: rgba(255, 230, 0, 0.897);
 }
+
+li {
+  padding-bottom: 30px;
+}
