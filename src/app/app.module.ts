@@ -6,7 +6,6 @@ import { RequestsService } from './_services/requests.service';
 // import { UsersService } from './_services/users.service';
 
 import { AppComponent } from './app.component';
-import { RequestsComponent } from './requests/requests.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 // import { LoginFormComponent } from './login-form/login-form.component';
@@ -15,7 +14,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RequestsComponent,
     RequestFormComponent,
     DashboardComponent,
     // LoginFormComponent,

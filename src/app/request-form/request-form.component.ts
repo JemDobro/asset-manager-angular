@@ -31,7 +31,7 @@ export class RequestFormComponent implements OnInit {
       quantity: form.value.quantity,
       start: form.value.start,
       end: form.value.end,
-      status: form.value.status,
+      status: "pending",
       userId: form.value.userId
     });
     this._requests = update_requests;

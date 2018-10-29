@@ -11,6 +11,8 @@ import { RequestsService } from '../_services/requests.service';
 })
 export class DashboardComponent implements OnInit {
   _requests: any;
+  requesting: boolean = false;
+  wantsDetails: boolean = false;
 
   constructor(private requestsService: RequestsService) { }
 
@@ -27,4 +29,24 @@ export class DashboardComponent implements OnInit {
     return this._requests.filter(request => request.status === status)
   }
 
+  toggleRequestForm() {
+    this.requesting = !this.requesting;
+  } 
+
+  toggleDetails() {
+    this.wantsDetails = !this.wantsDetails;
+  } 
+
+  // cancelRequest(request) {
+  //   console.log("cancel " + request.type)
+  // }  this works as a test, next step is changing status in db
+
+  // editRequest(request) {
+  //   console.log("edit " + request.type)
+  //   this.requesting = !this.requesting;
+  // } this works as a test, next step is opening pre-populated form
+
+  // resubmitRequest(request) {
+  //   console.log("resubmit " + request.type)
+  // }  this works as a test, next step is changing status in db
 }
