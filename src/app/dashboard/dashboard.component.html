@@ -1,3 +1,4 @@
+<button (click)="toggleDetails()">Details</button>
 <button (click)="toggleRequestForm()">Create Request</button>
 <app-request-form *ngIf=requesting></app-request-form>
 <section class="requests-summary">
@@ -7,6 +8,12 @@
     <li class="checked-out-summary" *ngFor="let request of getFilteredRequest('checked out')">
       <div><span>{{ request.type }}</span></div>
       <div><span>Due Date: </span>{{ request.end }}</div>
+      <div *ngIf=wantsDetails>
+          <div><span>Start Date: </span>{{ request.start }}</div>
+          <div><span>Model: </span>{{ request.model }}</div>
+          <div><span>Version: </span>{{ request.version }}</div>
+          <div><span>Quantity: </span>{{ request.quantity }}</div>
+        </div>
     </li>
   </ul>
   <h4>Pending: {{ getFilteredRequest('pending').length }}</h4>
@@ -14,6 +21,12 @@
     <li class="pending-summary" *ngFor="let request of getFilteredRequest('pending')">
       <div><span>{{ request.type }}</span></div>
       <div><span>Start Date: </span>{{ request.start }}</div>
+      <div *ngIf=wantsDetails>
+        <div><span>End Date: </span>{{ request.end }}</div>
+        <div><span>Model: </span>{{ request.model }}</div>
+        <div><span>Version: </span>{{ request.version }}</div>
+        <div><span>Quantity: </span>{{ request.quantity }}</div>
+      </div>
     </li>
   </ul>
   <h4>Cancelled: {{ getFilteredRequest('cancelled').length }}</h4>
@@ -21,6 +34,12 @@
     <li class="cancelled-summary" *ngFor="let request of getFilteredRequest('cancelled')">
       <div><span>{{ request.type }}</span></div>
       <div><span>Start Date: </span>{{ request.start }}</div>
+      <div *ngIf=wantsDetails>
+          <div><span>End Date: </span>{{ request.end }}</div>
+          <div><span>Model: </span>{{ request.model }}</div>
+          <div><span>Version: </span>{{ request.version }}</div>
+          <div><span>Quantity: </span>{{ request.quantity }}</div>
+        </div>
     </li>
   </ul>
 </section>

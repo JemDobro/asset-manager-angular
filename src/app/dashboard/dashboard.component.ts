@@ -12,6 +12,7 @@ import { RequestsService } from '../_services/requests.service';
 export class DashboardComponent implements OnInit {
   _requests: any;
   requesting: boolean = false;
+  wantsDetails: boolean = false;
 
   constructor(private requestsService: RequestsService) { }
 
@@ -30,6 +31,10 @@ export class DashboardComponent implements OnInit {
 
   toggleRequestForm() {
     this.requesting = !this.requesting;
+  } 
+
+  toggleDetails() {
+    this.wantsDetails = !this.wantsDetails;
   } 
 
 }
